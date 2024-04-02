@@ -20,7 +20,7 @@ docker-push:
 	docker push {{IMAGE_LOCATION}}/{{GOOGLE_PROJECT_ID}}/{{IMAGE_NAME}}:{{IMAGE_TAG}}
 
 google-deploy:
-  gcloud run deploy chat-api \
+  gcloud run deploy files-upload-gcp \
   --image={{IMAGE_LOCATION}}/{{GOOGLE_PROJECT_ID}}/{{IMAGE_NAME}}:{{IMAGE_TAG}} \
   --allow-unauthenticated \
   --port=8080 \

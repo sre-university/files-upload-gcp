@@ -53,7 +53,7 @@ FROM alpine:3.19.1@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f277
 # libgcc is required to run rust applications
 RUN apk add --no-cache libgcc
 
-COPY --from=builder /builder/bin/chat /usr/local/bin/chat
+COPY --from=builder /builder/bin/files-upload-gcp /usr/local/bin/files-upload-gcp
 
 RUN adduser user -D -G users
 USER user
@@ -61,4 +61,4 @@ USER user
 EXPOSE 8080
 
 WORKDIR /usr/local/bin
-ENTRYPOINT ["/usr/local/bin/chat"]
+ENTRYPOINT ["/usr/local/bin/files-upload-gcp"]
