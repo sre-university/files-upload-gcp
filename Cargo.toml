@@ -38,8 +38,18 @@ google-cloud-pubsub = { version = "0.23.0", default-features = false, features =
   "rustls-tls",
   "trace",
 ] }
+google-cloud-storage = { version = "0.16.0", default-features = false, features = [
+  "auth",
+  "google-cloud-auth",
+  # "external-account",
+  "rustls-tls",
+  "trace",
+] }
 google-cloud-gax = { version = "0.17.0" }
-google-cloud-googleapis = { version = "0.12.0", features = ["pubsub"] }
+google-cloud-googleapis = { version = "0.12.0", features = [
+  "pubsub",
+  "storage",
+] }
 
 # env
 dotenv = "0.15"
