@@ -1,6 +1,6 @@
 /target
 /credentials
-
+.DS_Store
 .env
 
 .env-test
