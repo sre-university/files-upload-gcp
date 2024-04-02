@@ -1,0 +1,56 @@
+[package]
+name = "files-upload-gcp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# tokio
+tokio = { version = "1.37", features = ["full"] }
+
+# logging / tracing
+tracing = "0.1"
+tracing-core = { version = "0.1" }
+tracing-subscriber = { version = "0.3", features = ["json"] }
+tracing-serde = "0.1"
+tracing-json2 = { git = "https://github.com/sre-university/tracing-json2.git", package = "tracing-json", features = [
+  "derive",
+] }
+
+# actix
+actix = "0.13"
+actix-cors = "0.7"
+actix-files = "0.6"
+actix-web = { version = "4.5", features = ["rustls"] }
+actix-web-httpauth = "0.8"
+actix-rt = "2.9"
+actix_derive = "0.6"
+
+# graphql
+async-graphql = { version = "7.0", features = ["default", "dataloader"] }
+async-graphql-actix-web = "7.0"
+
+# google cloud
+google-cloud-pubsub = { version = "0.23.0", default-features = false, features = [
+  "auth",
+  "google-cloud-auth",
+  "bytes",
+  # "external-account",
+  "rustls-tls",
+  "trace",
+] }
+google-cloud-gax = { version = "0.17.0" }
+google-cloud-googleapis = { version = "0.12.0", features = ["pubsub"] }
+
+# env
+dotenv = "0.15"
+envy = "0.4"
+
+# json serializer/deserializer
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# uuid
+uuid = { version = "1.8", features = ["v4", "serde"] }
+
+# handlebars
+handlebars = "5.1"
