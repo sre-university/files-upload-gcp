@@ -22,6 +22,7 @@ fn get_filter() -> Vec<(&'static str, LevelFilter)> {
         ("tonic", LevelFilter::WARN),
         ("hyper", LevelFilter::WARN),
         ("tower", LevelFilter::WARN),
+        ("reqwest", LevelFilter::WARN),
         ("async_nats", LevelFilter::INFO),
         ("h2", LevelFilter::INFO),
         ("actix_tls", LevelFilter::INFO),

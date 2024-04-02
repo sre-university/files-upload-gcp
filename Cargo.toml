@@ -64,3 +64,4 @@ uuid = { version = "1.8", features = ["v4", "serde"] }
 
 # handlebars
 handlebars = "5.1"
+base64-compat = "1.0.0"
