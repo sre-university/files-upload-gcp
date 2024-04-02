@@ -22,7 +22,7 @@ docker-push:
 google-deploy:
   gcloud run deploy files-upload-gcp \
   --image={{IMAGE_LOCATION}}/{{GOOGLE_PROJECT_ID}}/{{IMAGE_NAME}}:{{IMAGE_TAG}} \
-  --allow-unauthenticated \
+  --no-allow-unauthenticated \
   --port=8080 \
   --service-account=977645940426-compute@developer.gserviceaccount.com \
   --max-instances=1 \
@@ -32,9 +32,25 @@ google-deploy:
   --set-env-vars=APPLICATION_WORKERS=5 \
   --set-env-vars=LOG_FORMAT=json \
   --set-env-vars=LOG_LEVEL=debug \
-  --ingress=internal-and-cloud-load-balancing \
   --region=us-central1 \
   --project={{GOOGLE_PROJECT_ID}}
+
+# google-deploy:
+#   gcloud run deploy files-upload-gcp \
+#   --image={{IMAGE_LOCATION}}/{{GOOGLE_PROJECT_ID}}/{{IMAGE_NAME}}:{{IMAGE_TAG}} \
+#   --allow-unauthenticated \
+#   --port=8080 \
+#   --service-account=977645940426-compute@developer.gserviceaccount.com \
+#   --max-instances=1 \
+#   --set-env-vars='APPLICATION_URL=http://localhost' \
+#   --set-env-vars=APPLICATION_PORT=8080 \
+#   --set-env-vars=APPLICATION_BIND=0.0.0.0 \
+#   --set-env-vars=APPLICATION_WORKERS=5 \
+#   --set-env-vars=LOG_FORMAT=json \
+#   --set-env-vars=LOG_LEVEL=debug \
+#   --ingress=internal-and-cloud-load-balancing \
+#   --region=us-central1 \
+#   --project={{GOOGLE_PROJECT_ID}}
 
 # docker push {{IMAGE_LOCATION}}/{{GOOGLE_PROJECT_ID}}/{{IMAGE_NAME}}:{{IMAGE_TAG}}
 
