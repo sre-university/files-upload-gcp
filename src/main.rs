@@ -81,6 +81,8 @@ async fn main() -> Result<(), AppError> {
     // If the file does not exist or there is an error in reading it, ignore the error (`ok()`).
     dotenv::from_filename(env_file).ok();
 
+    // println!("{}", std::env::var("GOOGLE_APPLICATION_CREDENTIALS")?);
+
     // Initialize the logging system.
     logging::init();
 
