@@ -4,7 +4,7 @@ set windows-shell := ["powershell.exe", "-c"]
 GOOGLE_PROJECT_ID:='cybx-chat'
 IMAGE_LOCATION:='gcr.io'
 IMAGE_NAME:='files-upload-gcp'
-IMAGE_TAG:='v0.2.0'
+IMAGE_TAG:='v0.2.1'
 
 _default:
   just --choose
