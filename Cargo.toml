@@ -62,6 +62,15 @@ serde_json = "1.0"
 # uuid
 uuid = { version = "1.8", features = ["v4", "serde"] }
 
+# reqwest
+reqwest = { version = "0.12.2", features = [
+  "default-tls",
+  "charset",
+  "http2",
+  "macos-system-configuration",
+  "json",
+] }
+
 # handlebars
 handlebars = "5.1"
 base64-compat = "1.0.0"
