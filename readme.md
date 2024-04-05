@@ -32,3 +32,7 @@ mutation GCPFile {
 ```
 
 [google bucket](https://console.cloud.google.com/storage/browser/sre_university_test;tab=objects?forceOnBucketsSortingFiltering=true&project=cybx-chat&prefix=&forceOnObjectsSortingFiltering=false)
+
+### How to test
+
+https://github.com/la10736/rstest
